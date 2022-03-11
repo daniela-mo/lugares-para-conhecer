@@ -3,7 +3,7 @@ import InputMask from "react-input-mask";
 
 export const Modal = styled.div`
   width: 300px;
-  height: 400px;
+  height: 300px;
   justify-content: center;
   background-color: #fff;
   border-radius: 7px;
@@ -33,6 +33,8 @@ export const Result = styled.div`
 
 export const Buttons = styled.button`
   margin-right: 5px;
+  border: none;
+  background-color: transparent;
 `;
 
 export const Top = styled.div`
@@ -82,7 +84,6 @@ export const FormContent = styled.div`
 `;
 
 export const Label = styled.label`
-margin: 
   color: #000;
   font-family: Roboto;
   font-style: normal;
@@ -93,6 +94,8 @@ margin:
 
 export const Input = styled.input`
   padding: 12px 10px;
+  margin-left: 10px;
+  margin-bottom: 15px;
   font-size: 15px;
   border-radius: 7px;
   border: none;
@@ -100,7 +103,9 @@ export const Input = styled.input`
 `;
 
 export const MaskInput = styled(InputMask)`
-  padding: 12px 10px;
+  padding: 12px 8px;
+  margin-left: 12px;
+  margin-bottom: 10px;
   font-size: 16px;
   border-radius: 7px;
   border: none;

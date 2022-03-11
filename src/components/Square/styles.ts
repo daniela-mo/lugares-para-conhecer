@@ -25,7 +25,12 @@ export const Result = styled.div`
   padding: 5px;
 `;
 
-export const Buttons = styled.button``;
+export const Buttons = styled.button`
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+`;
 
 export const Top = styled.div`
   display: flex;
@@ -34,11 +39,16 @@ export const Top = styled.div`
   margin: 10px 5px 50px;
 `;
 
-export const Flag = styled.div``;
+export const Flag = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
 export const NomePais = styled.strong``;
 
-export const Edit = styled.div``;
+export const Edit = styled.div`
+  display: flex;
+`;
 
 export const Bandeira = styled.img`
   width: 56px;

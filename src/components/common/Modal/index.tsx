@@ -51,6 +51,7 @@ const ModalComponent = ({ item, setClose, editCard, state }: any) => {
                   <CheckIcon
                     style={{
                       color: "#868686",
+
                       cursor: "pointer",
                       fontSize: 20,
                     }}
