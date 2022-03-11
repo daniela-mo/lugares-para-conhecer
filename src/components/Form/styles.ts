@@ -45,16 +45,16 @@ export const Option = styled.option`
 `;
 
 export const Input = styled.input`
-  padding: 12px 20px;
+  padding: 13px 20px;
   font-size: 16px;
-  border-radius: 7px;
+  border-radius: 6px;
   border: none;
 `;
 
 export const MaskInput = styled(InputMask)`
-  padding: 12px 20px;
+  padding: 13px 20px;
   font-size: 16px;
-  border-radius: 7px;
+  border-radius: 6px;
   border: none;
 `;
 
