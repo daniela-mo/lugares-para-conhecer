@@ -10,6 +10,8 @@ export const Content = styled.div`
 export const ContentSquare = styled.div`
   width: 100%;
   max-width: 1140px;
+  display: flex;
+  flex-wrap: wrap;
 `;
 
 export const Result = styled.div`
@@ -17,11 +19,13 @@ export const Result = styled.div`
   height: 250px;
   border-radius: 7px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  margin-top: 40px;
+  margin: 40px 20px 20px 0;
   display: flex;
   flex-direction: column;
   padding: 5px;
 `;
+
+export const Buttons = styled.button``;
 
 export const Top = styled.div`
   display: flex;

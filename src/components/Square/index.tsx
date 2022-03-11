@@ -10,12 +10,13 @@ import {
   P,
   Flag,
   NomePais,
+  Buttons,
 } from "./styles";
 
 import EditIcon from "@material-ui/icons/Edit";
 import CloseIcon from "@material-ui/icons/Close";
 
-const Square = ({ list }: any) => {
+const Square = ({ list, deleteCard, openModal }: any) => {
   return (
     <Content>
       <ContentSquare>
@@ -28,11 +29,28 @@ const Square = ({ list }: any) => {
                   <NomePais>{item.name}</NomePais>
                 </Flag>
                 <Edit>
-                  <EditIcon style={{ color: "#868686", fontSize: 20 }} />
-                  <CloseIcon style={{ color: "#868686", fontSize: 22 }} />
+                  <Buttons onClick={() => openModal(item)}>
+                    <EditIcon
+                      style={{
+                        color: "#868686",
+                        cursor: "pointer",
+                        fontSize: 20,
+                      }}
+                    />
+                  </Buttons>
+                  <Buttons onClick={() => deleteCard(item._id)}>
+                    <CloseIcon
+                      style={{
+                        color: "#868686",
+                        cursor: "pointer",
+                        fontSize: 22,
+                      }}
+                    />
+                  </Buttons>
                 </Edit>
               </Top>
               <Border />
+
               <Text>
                 <P>Local: {item.local}</P>
                 <P> Meta: {item.meta}</P>

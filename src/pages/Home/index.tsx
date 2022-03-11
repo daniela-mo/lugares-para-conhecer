@@ -5,6 +5,7 @@ import { Square } from "../../components/Square";
 import { Container } from "./styles";
 import DEFAULT_API_URLS from "../../utils/enum";
 import axios from "axios";
+import { ModalComponent } from "../../components/common/Modal";
 
 const Home = () => {
   const [paises, setPaises] = useState([]);
@@ -15,6 +16,9 @@ const Home = () => {
   });
   const [list, setList] = useState([]);
   const [load, setLoad] = useState(false);
+  const [close, setClose] = useState(false);
+  const [itemModal, setItemModal] = useState({});
+  console.log("itemModal", itemModal);
 
   const handlePaises = async () => {
     try {
@@ -50,6 +54,27 @@ const Home = () => {
     }
   };
 
+  const deleteCard = async (item: any) => {
+    try {
+      await axios.delete(`${DEFAULT_API_URLS.PLACES}places/${item}`);
+      setLoad(true);
+    } catch (error) {}
+  };
+
+  const editCard = async (item: any) => {
+    try {
+      await axios.put(`${DEFAULT_API_URLS.PLACES}places/${item._id}`, item);
+      setLoad(true);
+      setClose(false);
+    } catch (error) {}
+  };
+
+  const openModal = (item: any) => {
+    // console.log("item", item);
+    setItemModal(item);
+    setClose(true);
+  };
+
   const handleList = async () => {
     try {
       await axios.get(`${DEFAULT_API_URLS.PLACES}`).then((res) => {
@@ -76,7 +101,14 @@ const Home = () => {
         state={{ value: form, action: setForm }}
         handleSend={handleSend}
       />
-      <Square list={list} />
+      <Square list={list} deleteCard={deleteCard} openModal={openModal} />
+      {close && (
+        <ModalComponent
+          setClose={setClose}
+          item={itemModal}
+          editCard={editCard}
+        />
+      )}
     </Container>
   );
 };
