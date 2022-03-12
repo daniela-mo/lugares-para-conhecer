@@ -34,7 +34,11 @@ export const Label = styled.label`
 `;
 
 export const Select = styled.select`
-  padding: 12px 20px;
+  width: 303px;
+  height: 48px;
+  margin-right: 34px;
+  border: none;
+  padding: 5px;
   font-size: 16px;
   border-radius: 7px;
 `;
@@ -45,21 +49,28 @@ export const Option = styled.option`
 `;
 
 export const Input = styled.input`
-  padding: 13px 20px;
+  width: 455px;
+  height: 48px;
+  margin-right: 28px;
   font-size: 16px;
   border-radius: 6px;
   border: none;
 `;
 
 export const MaskInput = styled(InputMask)`
-  padding: 13px 20px;
+  width: 238px;
+  height: 48px;
+  margin-right: 34px;
   font-size: 16px;
-  border-radius: 6px;
+  border-radius: 7px;
   border: none;
 `;
 
 export const Button = styled.button`
-  padding: 10px 50px;
+  width: 203px;
+  height: 49px;
+  text-align: center;
+  padding: 14px 64px;
   border-radius: 7px;
   border: none;
   font-size: 16px;

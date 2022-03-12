@@ -22,7 +22,7 @@ export const Result = styled.div`
   margin: 40px 20px 20px 0;
   display: flex;
   flex-direction: column;
-  padding: 5px;
+  padding: 10px;
 `;
 
 export const Buttons = styled.button`
@@ -36,15 +36,19 @@ export const Top = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin: 10px 5px 50px;
 `;
 
 export const Flag = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: 16px;
+  color: #4f9419;
+  text-align: left;
 `;
 
-export const NomePais = styled.strong``;
+export const NomePais = styled.strong`
+  margin-top: 11px;
+`;
 
 export const Edit = styled.div`
   display: flex;
@@ -56,18 +60,23 @@ export const Bandeira = styled.img`
 `;
 
 export const Border = styled.div`
-  margin: 0 5px;
+  margin: 20px 0 30px 0;
   border-top: 2px solid #ababab;
 `;
 
 export const Text = styled.div`
   display: flex;
+  width: 150pxn;
   flex-direction: column;
-  align-items: flex-start;
-  margin: 50px 5px;
+  margin-left: 20px;
 `;
 
 export const P = styled.p`
-  margin: 0;
-  font-size: 18px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1px;
+  text-align: left;
+  color: #000000;
 `;
