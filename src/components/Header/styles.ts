@@ -8,3 +8,9 @@ export const HeaderContainer = styled.div`
   align-items: center;
   background-color: #000;
 `;
+
+
+export const Label = styled.strong`
+color: #fff;
+font-size: 2rem;
+`
